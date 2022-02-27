@@ -28,7 +28,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "chrisatmachine.com"
+	return "Neovim 0.7.0"
 end
 
 dashboard.section.footer.val = footer()

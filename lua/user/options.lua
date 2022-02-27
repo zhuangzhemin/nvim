@@ -10,7 +10,21 @@ local options = {
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
+  fileformats = {"unix", "dos"},           -- file format as 'unix' or 'dos'
+  -- encoding = "utf-8",
+  -- termencoding = "utf-8",
   fileencoding = "utf-8",                  -- the encoding written to a file
+  fileencodings = {                        -- the encodings supported when loading a file
+    "utf-8",
+    "chinese",
+    "ucs-bom",
+    "cp936",
+    "gb18030",
+    "big5",
+    "bgk",
+    "euc-jp",
+    "euc-kr",
+    "latin1"},
   expandtab = true,                        -- convert tabs to spaces
   shiftwidth = 4,                          -- the number of spaces inserted for each indentation
   tabstop = 4,                             -- insert 2 spaces for a tab
@@ -36,7 +50,6 @@ local options = {
   scrolloff = 3,                           -- minimum lines to keep above and below cursor
   sidescrolloff = 8,
   cmdheight = 1,                           -- more space in the neovim command line for displaying messages
-  -- guifont = "monospace:h17",               -- the font used in graphical neovim applications
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
 }
 
