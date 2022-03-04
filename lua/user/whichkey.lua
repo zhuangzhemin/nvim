@@ -99,6 +99,7 @@ local mappings = {
     name = "Misc",
     c = { "<cmd>'a,'by<cr>", "Copy Mark A to Mark B" },
     x = { "<cmd>'a,'bd<cr>", "Cut Mark A to Mark B" },
+    a = { "<cmd>AerialToggle!<cr>", "Toggle the aerial window" },
   },
 
   d = {
