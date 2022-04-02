@@ -22,7 +22,7 @@ local servers = {
     "html",
     "lemminx",
     --"yamlls",
-    "remark_ls",
+    -- "remark_ls",
 }
 
 local status_ok, lsp_installer_servers = pcall(require, "nvim-lsp-installer.servers")

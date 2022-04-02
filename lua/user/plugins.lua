@@ -90,6 +90,17 @@ return packer.startup(function(use)
   use "rcarriga/nvim-dap-ui"
   --use "Pocco81/DAPInstall.nvim"
 
+  -- Use coc.vim for vim-beancount
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use "nathangrigg/vim-beancount"
+
+  -- markdown Preview
+  use {
+      'iamcco/markdown-preview.nvim',
+      run = function() vim.fn['mkdp#util#install']() end, -- run ":call mkdp#util#install()" if auto install does not work
+      ft = {'markdown'}
+  }
+
   -- plugins here
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
@@ -108,7 +119,7 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "stevearc/aerial.nvim"
-  use "github/copilot.vim"
+  -- use "github/copilot.vim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

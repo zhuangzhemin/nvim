@@ -68,6 +68,9 @@ vim.cmd [[
     " Initialize directories {{{ at ~/.local/share/nvim/sessions
     function! InitializeDirectories()
         let parent = $HOME . '/' . '.local' . '/' . 'share' . '/' . 'nvim'
+        if !isdirectory(parent)
+            call mkdir(parent)
+        endif
         let prefix = 'sessions'
         let common_dir = parent . '/' . prefix
         if !isdirectory(common_dir)
@@ -112,3 +115,4 @@ vim.cmd([[
         \   'cache_enabled': 0,
         \ }
   ]])
+
